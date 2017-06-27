@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+  </head>
+  <body>
+    
+  
+      <a-scene>
+          
+           <a-asset>
+          <img id="redandgreenlights" src='karlie.jpg' />
+          <img id="karlie2" src='talandk.png' />
+          <img id="colorsbackground" src='city.jpg' />
+          <img id="karlie3" src='nyckloss.jpg' />
+          
+      </a-asset>
+              <a-text position="-1.5 3 -5" value="Kode with Klossy" color="white" width="10" height="10"></a-text>
+              <a-text position="-1.5 -1 -5" value="(By Tallie & Goldie)" color="white" width="10" height="10"></a-text>
+          
+              
+             <a-sky material="src:#colorsbackground"></a-sky>
+             
+          <a-box material="src:#redandgreenlights" width="2" height="2" depth="2" position="0 1 -5" rotation="0 45 0">
+              <a-box material="src:#karlie2" width="2" height="2" depth="2" position="0 1 10" rotation="0 45 0">
+                  <a-box material="src:#karlie3" width="2" height="2" depth="2" position="0 1 -10" rotation="0 45 0">
+              
+              <a-animation attribute="material.color" repeat="indefinite" from="fade" to="material.#redandgreenlights" fill="forwards" duration="10000"></a-animation>
+             
+             <a-animation begin="click" attribute="rotation" repeat="indefinite" to="0 0 360" fill="forwards" dur="10000">
+                </a-animation> 
+                
+              
+          
+          </a-box>
+          </a-box>
+          
+           <a-camera>
+              <a-cursor position="0 1 -5" color="white"></a-cursor>
+          </a-camera>
+          </a-scene>
+          
+        
+  </body>
+</html>
